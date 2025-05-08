@@ -22,14 +22,22 @@
     </header>
 
     <section class="hero">
-        <div class="hero__content">
-            <h1 class="hero__title">From Concept to Creation</h1>
-            <p class="hero__subtitle">Your Partner in Remodeling and New Builds</p>
-            <button class="hero__button">Contact Us</button>
+      <div class="hero__content">
+        <h1 class="hero__title">From Concept to Creation</h1>
+        <p class="hero__subtitle">Your Partner in Remodeling and New Builds</p>
+        <button class="hero__button">Contact Us</button>
+      </div>
+      <div class="hero__carousel carousel">
+        <div class="carousel__item active">
+          <img src="images/imagen3.jpg" class="carousel__image" alt="Slide 1">
         </div>
-        <div class="hero__image">
-            <img src="images/Imagen1.jpg" alt="Modern House">
+        <div class="carousel__item">
+          <img src="images/Imagen2.jpg" class="carousel__image" alt="Slide 2">
         </div>
+        <div class="carousel__item">
+          <img src="images/Imagen1.jpg" class="carousel__image" alt="Slide 3">
+        </div>
+      </div>
     </section>
 
 
@@ -64,7 +72,7 @@
     <section class="how">   
         <div class="how__grid">
           <div class="how__grid__item1">
-            <img src="images/Imagen3.jpg" class="how__grid__item1--image1">
+            <img src="images/Rectangle 90.jpg" class="how__grid__item1--image1">
           </div>
           <div class="how__grid__item2">
             <img src="images/Imagen4.jpg" class="how__grid__item2--image2">
@@ -85,49 +93,88 @@
     </section>
 
     <footer class="footer">
-        <div class="footer__newsletter">
-            <input type="email" class="footer__input" placeholder="Write E.Mail Here">
-            <button class="footer__button">Subscribe</button>
+      <div class="footer__background"></div>
+      <div class="footer__container">
+        <div class="footer__row">
+          <div class="footer__column footer__column--brand">
+            <div class="footer__brand">FAIRWAYCLIFFS</div>
+            <p class="footer__description">
+              Lorem ipsum dolor sitametco nsectet ur. Ultrices diamcmm odo odio tellus eget.Lorem
+            </p>
+            <div class="footer__social">
+              <a href="#" class="footer__social-link">
+                <i class="footer__social-icon footer__social-icon--facebook"></i>
+              </a>
+              <a href="#" class="footer__social-link">
+                <i class="footer__social-icon footer__social-icon--linkedin"></i>
+              </a>
+              <a href="#" class="footer__social-link">
+                <i class="footer__social-icon footer__social-icon--twitter"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer__column">
+            <h3 class="footer__title">Contact US</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">About US</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Help</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">View More</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Customer Supports</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer__column">
+            <h3 class="footer__title">Our Services</h3>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#" class="footer__link">Our Reviews</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Our Team</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Pricing</a></li>
+              <li class="footer__list-item"><a href="#" class="footer__link">Benefits</a></li>
+            </ul>
+          </div>
         </div>
         
-        <div class="footer__content">
-            <div class="footer__info">
-                <h3 class="footer__title">FAIRWAYCLIFFS</h3>
-                <p class="footer__text">Lorem ipsum dolor sitametco nsectet ur. Ultrices diamomm odo odio tellus eget.Lorem</p>
-                <div class="footer__social">
-                    <a href="#" class="footer__social-link"><i class="footer__social-icon footer__social-icon--facebook"></i></a>
-                    <a href="#" class="footer__social-link"><i class="footer__social-icon footer__social-icon--linkedin"></i></a>
-                    <a href="#" class="footer__social-link"><i class="footer__social-icon footer__social-icon--twitter"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer__links">
-                <div class="footer__column">
-                    <h4 class="footer__column-title">Contact US</h4>
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">About US</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Help</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">View More</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Customer Supports</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer__column">
-                    <h4 class="footer__column-title">Our Services</h4>
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Our Reviews</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Our Team</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Pricing</a></li>
-                        <li class="footer__menu-item"><a href="#" class="footer__menu-link">Benefits</a></li>
-                    </ul>
-                </div>
-            </div>
+        <div class="footer__subscription">
+          <form class="footer__form">
+            <input type="email" class="footer__input" placeholder="Write E-Mail Here">
+            <button type="submit" class="footer__button">Subscribe</button>
+          </form>
         </div>
         
         <div class="footer__copyright">
-            <p>Copyright 2023</p>
+          Copyright 2023
         </div>
+      </div>
     </footer>
+
+  </section>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const items = document.querySelectorAll('.carousel__item');
+      let currentSlide = 0;
+      let interval;
+  
+      function showSlide(index) {
+        items.forEach(item => item.classList.remove('active'));
+        items[index].classList.add('active');
+        currentSlide = index;
+      }
+  
+      function nextSlide() {
+        let newIndex = currentSlide + 1;
+        if (newIndex >= items.length) newIndex = 0;
+        showSlide(newIndex);
+      }
+  
+      interval = setInterval(nextSlide, 3000);
+    });
+  </script>
+  
+
+
 
 </body>
 
